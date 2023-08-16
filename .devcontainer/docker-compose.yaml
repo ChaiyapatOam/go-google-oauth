@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ../:/workspace:cached
+  mysql:
+    image: mysql:8
+    ports:
+      - 3306:3306
+    volumes:
+      - ../.docker/mysql/:/var/lib/mysql/
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - "7000:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_PASSWORD: password
+    depends_on:
+      - mysql

@@ -1,0 +1,21 @@
+{
+	"name": "Go-Google-OAuth",
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				// Improve highlighting of errors, warnings and other language diagnostics.
+				"usernamehw.errorlens",
+				// Improve your code commenting by annotating with alert, informational, TODOs, and more!
+				"aaron-bond.better-comments",
+				// Editor configuration file
+				"EditorConfig.EditorConfig"
+			]
+		}
+	},
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "root"
+}
