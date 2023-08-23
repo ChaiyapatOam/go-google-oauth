@@ -12,7 +12,7 @@ services:
   mysql:
     image: mysql:8
     ports:
-      - 3306:3306
+      - 5001:3306
     volumes:
       - ../.docker/mysql/:/var/lib/mysql/
     environment:
@@ -20,7 +20,7 @@ services:
   phpmyadmin:
     image: phpmyadmin
     ports:
-      - "7000:80"
+      - 5002:80
     environment:
       PMA_HOST: mysql
       PMA_PASSWORD: password
